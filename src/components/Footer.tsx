@@ -10,7 +10,7 @@ export default function Footer() {
             'GeistMono, ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace',
         }}
       >
-        Сделано с <Heart className="h-3.5 w-3.5 text-red-500 inline-block" fill="currentColor" /> в Сан-Франциско
+        Сделано с <Heart className="h-3.5 w-3.5 text-red-500 inline-block" fill="currentColor" /> для тех, кто любит анимацию
       </p>
     </footer>
   )

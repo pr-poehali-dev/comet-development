@@ -13,32 +13,32 @@ interface SearchQuery {
 
 const searchQueries: SearchQuery[] = [
   {
-    id: "favorites",
-    question: "Покажи мои правки в избранном",
+    id: "brand",
+    question: "Анимация для рекламного ролика бренда",
     videoSrc: "/videos/favorites.mp4",
     fallbackSrc: "/videos/favorites.mp4",
-    category: "Функция",
+    category: "Реклама",
   },
   {
-    id: "windsurf",
-    question: "Мы что-то меняли через Windsurf?",
+    id: "character",
+    question: "Персонажная анимация для игры",
     videoSrc: "/videos/update-windsurf.mp4",
     fallbackSrc: "/videos/update-windsurf.mp4",
-    category: "Редактор",
+    category: "Игры",
   },
   {
-    id: "darkmode",
-    question: "Покажи рефакторинг темной темы",
+    id: "explainer",
+    question: "Explainer-видео для стартапа",
     videoSrc: "/videos/dark-mode-search.mp4",
     fallbackSrc: "/videos/dark-mode-search.mp4",
-    category: "Рефактор",
+    category: "Бизнес",
   },
   {
-    id: "v9",
-    question: "Что я делал в v9?",
+    id: "logo",
+    question: "Анимация логотипа для соцсетей",
     videoSrc: "/videos/did-v9.mp4",
     fallbackSrc: "/videos/did-v9.mp4",
-    category: "Версия",
+    category: "Брендинг",
   },
 ]
 
@@ -115,13 +115,13 @@ export default function AgenticAISearchSection({ onOpenInstall }: AgenticAISearc
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case "Функция":
+      case "Реклама":
         return "bg-cyan-500/20 text-cyan-300 border-cyan-400/30"
-      case "Редактор":
+      case "Игры":
         return "bg-orange-500/20 text-orange-300 border-orange-400/30"
-      case "Версия":
+      case "Бизнес":
         return "bg-pink-500/20 text-pink-300 border-pink-400/30"
-      case "Рефактор":
+      case "Брендинг":
         return "bg-purple-500/20 text-purple-300 border-purple-400/30"
       default:
         return "bg-white/20 text-white border-white/30"
@@ -146,7 +146,7 @@ export default function AgenticAISearchSection({ onOpenInstall }: AgenticAISearc
             backgroundClip: "text",
           }}
         >
-          AI-поиск по истории
+          Любой тип анимации
         </h2>
         <p
           className="max-w-2xl mx-auto"
@@ -158,7 +158,7 @@ export default function AgenticAISearchSection({ onOpenInstall }: AgenticAISearc
             textAlign: "center",
           }}
         >
-          Спрашивайте что угодно. Rewind понимает всю историю разработки -- по версиям, веткам и редакторам.
+          Реклама, игры, брендинг или обучение — у нас есть опыт в каждом направлении.
         </p>
       </div>
 
@@ -171,7 +171,7 @@ export default function AgenticAISearchSection({ onOpenInstall }: AgenticAISearc
             <div className="rounded-t-lg overflow-hidden shadow-2xl max-w-4xl mx-auto border border-white/10 border-b-0 relative">
               <FeatureVideo
                 src={activeQuery.videoSrc}
-                alt={`AI-поиск: ${activeQuery.question}`}
+                alt={`Пример: ${activeQuery.question}`}
                 fallbackSrc={activeQuery.fallbackSrc}
                 fixedAspectRatio={true}
               />
@@ -185,7 +185,7 @@ export default function AgenticAISearchSection({ onOpenInstall }: AgenticAISearc
                       className={`w-2 h-2 rounded-full transition-all duration-200 ${
                         activeQuery.id === query.id ? "bg-white w-6" : "bg-white/50 hover:bg-white/70"
                       }`}
-                      aria-label={`Переключить на запрос: ${query.question}`}
+                      aria-label={`Переключить на: ${query.question}`}
                     />
                   ))}
                 </div>
@@ -214,7 +214,7 @@ export default function AgenticAISearchSection({ onOpenInstall }: AgenticAISearc
                         textShadow: "0 2px 4px rgba(0,0,0,0.8)",
                       }}
                     >
-                      AI-поиск
+                      Портфолио
                     </h3>
                     <p
                       className="text-white/95 mb-6 text-base lg:text-lg"
@@ -237,71 +237,47 @@ export default function AgenticAISearchSection({ onOpenInstall }: AgenticAISearc
                         }}
                       >
                         <Download className="mr-2 h-4 w-4 stroke-[2.5px]" />
-                        УСТАНОВИТЬ
+                        ЗАКАЗАТЬ ПРОЕКТ
                       </Button>
                     )}
                   </div>
 
-                  <div className="flex flex-col gap-2 max-w-xs">
-                    <div className="flex flex-col gap-2 w-[240px]">
-                      {searchQueries.map((query) => (
-                        <button
-                          key={query.id}
-                          onClick={() => handleQueryClick(query)}
-                          onMouseEnter={() => handleQueryHover(query)}
-                          className={`group relative text-left p-3 rounded-xl border-2 transition-colors duration-200 ${
-                            activeQuery.id === query.id
-                              ? "bg-white/15 border-white/60 text-white shadow-lg"
-                              : "bg-black/30 border-white/20 text-white/90 hover:bg-white/10 hover:border-white/40"
+                  <div className="flex flex-col gap-2 min-w-[200px]">
+                    {searchQueries.map((query) => (
+                      <button
+                        key={query.id}
+                        onClick={() => handleQueryClick(query)}
+                        onMouseEnter={() => handleQueryHover(query)}
+                        className={`flex items-center gap-3 px-4 py-3 rounded-xl border text-left transition-all duration-200 backdrop-blur-sm ${
+                          activeQuery.id === query.id
+                            ? "bg-white/20 border-white/50 shadow-lg"
+                            : "bg-black/30 border-white/20 hover:bg-white/10 hover:border-white/30"
+                        }`}
+                      >
+                        <Play
+                          className={`w-3 h-3 flex-shrink-0 transition-colors duration-200 ${
+                            activeQuery.id === query.id ? "text-white" : "text-white/50"
                           }`}
-                          style={{
-                            backdropFilter: "blur(8px)",
-                            height: "auto",
-                            minHeight: "64px",
-                          }}
-                        >
-                          <div className="flex items-start gap-2">
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center gap-2 mb-1">
-                                <span
-                                  className={`px-1.5 py-0.5 rounded text-[10px] font-medium border ${getCategoryColor(
-                                    query.category,
-                                  )}`}
-                                  style={{
-                                    fontFamily: "GeistMono, monospace",
-                                  }}
-                                >
-                                  {query.category}
-                                </span>
-                                {activeQuery.id === query.id && (
-                                  <Play className="w-3 h-3 text-white/80" fill="currentColor" />
-                                )}
-                              </div>
-                              <p
-                                className="text-xs leading-relaxed"
-                                style={{
-                                  fontFamily: "GeistMono, monospace",
-                                  textShadow: "0 1px 2px rgba(0,0,0,0.8)",
-                                }}
-                              >
-                                "{query.question}"
-                              </p>
-                            </div>
-                          </div>
-
-                          {hoveredQuery === query.id && activeQuery.id !== query.id && (
-                            <div
-                              className="absolute inset-0 rounded-xl pointer-events-none"
-                              style={{
-                                background:
-                                  "linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(255, 92, 40, 0.1), rgba(255, 92, 157, 0.1))",
-                                border: "1px solid rgba(255, 255, 255, 0.2)",
-                              }}
-                            />
-                          )}
-                        </button>
-                      ))}
-                    </div>
+                          fill="currentColor"
+                        />
+                        <div className="flex flex-col gap-1 min-w-0">
+                          <span
+                            className={`text-xs font-mono leading-tight truncate transition-colors duration-200 ${
+                              activeQuery.id === query.id ? "text-white" : "text-white/70"
+                            }`}
+                            style={{ fontFamily: "GeistMono, monospace", fontSize: "11px" }}
+                          >
+                            {query.question}
+                          </span>
+                          <span
+                            className={`text-xs px-1.5 py-0.5 rounded border w-fit transition-all duration-200 ${getCategoryColor(query.category)}`}
+                            style={{ fontFamily: "GeistMono, monospace", fontSize: "10px" }}
+                          >
+                            {query.category}
+                          </span>
+                        </div>
+                      </button>
+                    ))}
                   </div>
                 </div>
               </div>

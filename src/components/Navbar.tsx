@@ -80,12 +80,12 @@ export default function Navbar({ isBannerVisible = true }: NavbarProps) {
                 height: "auto",
               }}
             >
-              Rewind
+              Анимастер
             </span>
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <a href="https://tally.so/r/n0l7BB" target="_blank" rel="noopener noreferrer">
+            <a href="#portfolio">
               <Button
                 className="bg-transparent hover:bg-white/10 border border-white/30 rounded-lg"
                 style={{
@@ -99,7 +99,7 @@ export default function Navbar({ isBannerVisible = true }: NavbarProps) {
                   height: "48px",
                 }}
               >
-                ОТЗЫВ
+                ПОРТФОЛИО
               </Button>
             </a>
             <Button
@@ -118,7 +118,7 @@ export default function Navbar({ isBannerVisible = true }: NavbarProps) {
               onClick={() => setIsInstallModalOpen(true)}
             >
               <Download className="mr-2 h-4 w-4 stroke-[2.5px]" />
-              СКАЧАТЬ
+              ЗАКАЗАТЬ
             </Button>
           </div>
 
@@ -142,9 +142,7 @@ export default function Navbar({ isBannerVisible = true }: NavbarProps) {
         >
           <div className="p-4 flex flex-col gap-4">
             <a
-              href="https://tally.so/r/n0l7BB"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#portfolio"
               className="w-full"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -161,7 +159,7 @@ export default function Navbar({ isBannerVisible = true }: NavbarProps) {
                   height: "48px",
                 }}
               >
-                ОТЗЫВ
+                ПОРТФОЛИО
               </Button>
             </a>
             <Button
@@ -183,7 +181,7 @@ export default function Navbar({ isBannerVisible = true }: NavbarProps) {
               }}
             >
               <Download className="mr-2 h-4 w-4 stroke-[2.5px]" />
-              СКАЧАТЬ
+              ЗАКАЗАТЬ
             </Button>
           </div>
         </div>

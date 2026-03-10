@@ -15,25 +15,25 @@ interface BannerInfo {
 
 const bannerInfos: BannerInfo[] = [
   {
-    id: "ai-for-humans",
-    desktopText: 'AI for Humans -- "Роботы пишут ваш код? Rewind -- ваша страховка."',
-    mobileText: 'AI for Humans -- "Rewind -- ваша страховка."',
-    linkText: "Слушать",
-    linkUrl: "https://www.youtube.com/watch?v=ps8VJ2YeKvs&t=2203s",
+    id: "promo",
+    desktopText: "Скидка 20% на первый заказ — только до конца месяца. Успейте оформить заявку!",
+    mobileText: "Скидка 20% на первый заказ!",
+    linkText: "Заказать",
+    linkUrl: "#",
   },
   {
-    id: "ai-jason",
-    desktopText: 'AI Jason (200K) называет Rewind "Vibe Versioning" -- UI в Cursor в 10 раз быстрее',
-    mobileText: 'AI Jason называет Rewind "Vibe Versioning"',
+    id: "portfolio",
+    desktopText: "Новые работы в портфолио — посмотрите что мы сделали для брендов и стартапов",
+    mobileText: "Новые работы в портфолио",
     linkText: "Смотреть",
-    linkUrl: "https://youtu.be/JfMcFjD-tIA?si=sSr6SIvZfGOth7QV",
+    linkUrl: "#portfolio",
   },
   {
-    id: "eric-tech",
-    desktopText: 'Eric Tech: "Vibe Coding с Gemini AI." Rewind в рабочем процессе.',
-    mobileText: 'Eric Tech: "Vibe Coding с Gemini AI."',
-    linkText: "Смотреть воркфлоу",
-    linkUrl: "https://youtu.be/AMeMeWjQmsY?si=hqXmTiIzDWzBUkn7",
+    id: "speed",
+    desktopText: "Срочная анимация за 48 часов — напишите нам и мы обсудим детали",
+    mobileText: "Срочная анимация за 48 часов",
+    linkText: "Написать",
+    linkUrl: "#",
   },
 ]
 
@@ -71,22 +71,6 @@ export default function AnnouncementBanner({ onVisibilityChange }: AnnouncementB
 
   if (!isVisible) return null
 
-  const renderIcon = () => {
-    if (currentBanner.id === "visual-studio-magazine") {
-      return (
-        <svg className="w-4 h-4 text-white/70" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-        </svg>
-      )
-    }
-
-    return (
-      <svg className="w-4 h-4 text-white/70" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136C4.495 20.455 12 20.455 12 20.455s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
-      </svg>
-    )
-  }
-
   const simpleTransition = isTransitioning ? "opacity-0 transform scale-98" : "opacity-100 transform scale-100"
 
   return (
@@ -109,19 +93,8 @@ export default function AnnouncementBanner({ onVisibilityChange }: AnnouncementB
             }`}
           ></div>
 
-          <div
-            className={`transition-transform duration-600 ease-out motion-reduce:transition-none motion-reduce:transform-none`}
-            style={{
-              transitionDelay: isTransitioning ? "50ms" : "100ms",
-            }}
-          >
-            {renderIcon()}
-          </div>
-
           <a
             href={currentBanner.linkUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             className="text-white/90 text-xs sm:text-sm cursor-pointer leading-tight"
             style={{
               fontFamily: '"GeistSans", sans-serif',

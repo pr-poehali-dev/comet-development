@@ -15,24 +15,24 @@ interface FeatureData {
 const features: FeatureData[] = [
   {
     id: "save",
-    title: "Сохранить",
-    description: "Мгновенно сохраняйте код -- и отменяйте плохие AI-правки в любой момент.",
+    title: "Концепция",
+    description: "Прорабатываем идею: референсы, раскадровка и утверждение стиля до начала работ.",
     videoSrc: "/videos/save.mp4",
     fallbackSrc: "/videos/save-review-restore.mp4",
     thumbnailSrc: "/images/save-thumbnail.jpeg",
   },
   {
     id: "preview",
-    title: "Просмотр",
-    description: "Переключайтесь на любую версию в один клик.",
+    title: "Производство",
+    description: "Создаём анимацию по утверждённому сценарию — чисто, в срок и без лишних правок.",
     videoSrc: "/videos/preview.mp4",
     fallbackSrc: "/videos/save-review-restore.mp4",
     thumbnailSrc: "/images/preview-thumbnail.jpeg",
   },
   {
     id: "restore",
-    title: "Восстановить",
-    description: "Вернитесь к чистой версии в один клик.",
+    title: "Финал",
+    description: "Финальная версия в нужном формате: MP4, GIF, WebM или любом другом.",
     videoSrc: "/videos/restore.mp4",
     fallbackSrc: "/videos/save-review-restore.mp4",
     thumbnailSrc: "/images/restore-thumbnail.jpeg",
@@ -109,7 +109,7 @@ export default function SaveReviewRestoreSection({ onOpenInstall }: SaveReviewRe
             backgroundClip: "text",
           }}
         >
-          Сохранить, Просмотреть, Восстановить
+          Концепция, Производство, Финал
         </h2>
         <p
           className="max-w-2xl mx-auto"
@@ -121,7 +121,7 @@ export default function SaveReviewRestoreSection({ onOpenInstall }: SaveReviewRe
             textAlign: "center",
           }}
         >
-          AI работает быстро -- один плохой промпт может сломать всё. Rewind позволяет сохранять прогресс, просматривать изменения и восстанавливать мгновенно.
+          Ведём проект от первой идеи до готового ролика — прозрачно, в срок и без сюрпризов.
         </p>
       </div>
 
@@ -195,7 +195,7 @@ export default function SaveReviewRestoreSection({ onOpenInstall }: SaveReviewRe
                         }}
                       >
                         <Download className="mr-2 h-4 w-4 stroke-[2.5px]" />
-                        УСТАНОВИТЬ
+                        ЗАКАЗАТЬ ПРОЕКТ
                       </Button>
                     )}
                   </div>
@@ -218,23 +218,17 @@ export default function SaveReviewRestoreSection({ onOpenInstall }: SaveReviewRe
                         >
                           <img
                             src={feature.thumbnailSrc || "/placeholder.svg"}
-                            alt={`${feature.title} - функция Rewind`}
+                            alt={`${feature.title} — этап работы`}
                             className="w-full h-full object-cover"
                           />
                         </div>
-
-                        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                          <span
-                            className={`text-sm font-mono transition-colors duration-200 ${
-                              activeFeature.id === feature.id ? "text-white" : "text-white/80"
-                            }`}
-                            style={{
-                              fontFamily: "GeistMono, monospace",
-                              textShadow: "0 1px 2px rgba(0,0,0,0.8)",
-                            }}
-                          >
-                            {feature.title}
-                          </span>
+                        <div
+                          className={`absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-mono transition-colors duration-200 whitespace-nowrap ${
+                            activeFeature.id === feature.id ? "text-white" : "text-white/50"
+                          }`}
+                          style={{ fontFamily: "GeistMono, monospace" }}
+                        >
+                          {feature.title}
                         </div>
                       </div>
                     ))}

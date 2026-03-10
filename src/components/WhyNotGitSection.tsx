@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Download, Lightbulb, Save, Users, SeparatorHorizontal } from "lucide-react"
+import { Download, Lightbulb, Zap, Users, Clock } from "lucide-react"
 
 interface WhyNotGitSectionProps {
   onOpenInstall?: () => void
@@ -8,24 +8,24 @@ interface WhyNotGitSectionProps {
 export default function WhyNotGitSection({ onOpenInstall }: WhyNotGitSectionProps) {
   const features = [
     {
-      icon: Save,
-      title: "Git требует чистых коммитов.",
-      description: "Rewind захватывает хаотичные эксперименты -- без staging и лишних раздумий.",
+      icon: Zap,
+      title: "Быстрые сроки без потери качества.",
+      description: "Работаем итерациями — вы видите прогресс на каждом этапе, без долгих ожиданий финала.",
     },
     {
-      icon: SeparatorHorizontal,
-      title: "Git засоряет репо одноразовыми правками.",
-      description: "Rewind хранит отдельно -- ваш Git остаётся чистым.",
+      icon: Clock,
+      title: "Фиксированная стоимость.",
+      description: "Обсуждаем бюджет заранее — никаких сюрпризов и скрытых доплат в процессе.",
     },
     {
       icon: Users,
-      title: "Git создан для инженеров.",
-      description: "Rewind работает для вайб-кодеров, вайб-дизайнеров и всех, кто вайбит с AI.",
+      title: "Личный менеджер проекта.",
+      description: "Один человек ведёт вас от брифа до сдачи — не нужно объяснять задачу заново каждый раз.",
     },
     {
       icon: Lightbulb,
-      title: "Git для финального продукта.",
-      description: "Rewind для экспериментов -- быстрых, хаотичных и креативных.",
+      title: "Неограниченные правки на этапе концепции.",
+      description: "Пока не утвердили стиль — правим столько, сколько нужно. Переделки после финала — платно.",
     },
   ]
 
@@ -48,7 +48,7 @@ export default function WhyNotGitSection({ onOpenInstall }: WhyNotGitSectionProp
               backgroundClip: "text",
             }}
           >
-            А почему не просто Git?
+            Почему именно мы?
           </h2>
           <p
             className="max-w-2xl mx-auto text-white/90 mb-8"
@@ -59,7 +59,7 @@ export default function WhyNotGitSection({ onOpenInstall }: WhyNotGitSectionProp
               textAlign: "center",
             }}
           >
-            Git для деплоя. Rewind для экспериментов.
+            Не просто красиво. Работает на ваши цели.
           </p>
         </div>
 
@@ -112,7 +112,7 @@ export default function WhyNotGitSection({ onOpenInstall }: WhyNotGitSectionProp
               lineHeight: "1.5",
             }}
           >
-            Перестаньте бояться сломать код. Экспериментируйте уверенно.
+            Перестаньте тратить время на поиск исполнителей. Расскажите задачу — мы возьмём всё на себя.
           </p>
 
           {onOpenInstall && (
@@ -126,7 +126,7 @@ export default function WhyNotGitSection({ onOpenInstall }: WhyNotGitSectionProp
               }}
             >
               <Download className="mr-2 h-4 w-4 stroke-[2.5px]" />
-              УСТАНОВИТЬ
+              ЗАКАЗАТЬ ПРОЕКТ
             </Button>
           )}
         </div>

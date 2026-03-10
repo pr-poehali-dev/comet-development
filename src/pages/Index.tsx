@@ -68,11 +68,11 @@ export default function Home() {
                     color: "#FFFFFF",
                     textShadow: "0 1px 2px rgba(0,0,0,0.3)",
                   }}
-                  aria-label="AI-контроль версий"
+                  aria-label="Студия анимации"
                 >
-                  AI-контроль
+                  Студия
                   <br />
-                  версий
+                  анимации
                 </h1>
                 <p
                   className="mx-auto h-auto select-text mb-3"
@@ -88,7 +88,7 @@ export default function Home() {
                     backgroundColor: "transparent",
                   }}
                 >
-                  Отменяйте ошибки AI мгновенно. Просматривайте безопасно. Откатывайте в один клик.
+                  Создаём анимацию для брендов, фильмов и игр. Оживляем идеи в один клик.
                 </p>
               </div>
 
@@ -104,18 +104,13 @@ export default function Home() {
                     className="bg-white hover:bg-gray-100 flex items-center justify-center px-4 sm:px-6 w-full rounded-lg shadow-lg font-mono text-xs sm:text-sm md:text-base font-semibold tracking-wider text-black h-[50px] sm:h-[60px]"
                     onClick={openInstallModal}
                   >
-                    <Download className="mr-2 h-4 w-4" /> УСТАНОВИТЬ
+                    <Download className="mr-2 h-4 w-4" /> ЗАКАЗАТЬ ПРОЕКТ
                   </Button>
                   <a
-                    href="https://x.com/jackjack_eth"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#portfolio"
                     className="bg-black hover:bg-black/80 flex items-center justify-center px-4 sm:px-6 w-full rounded-lg shadow-lg font-mono text-xs sm:text-sm md:text-base font-semibold tracking-wider text-white h-[50px] sm:h-[60px] border border-white/10"
                   >
-                    <svg className="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                    </svg>
-                    НАПИСАТЬ
+                    НАШИ РАБОТЫ
                   </a>
                 </div>
               </div>
@@ -136,9 +131,9 @@ export default function Home() {
                   color: "#FFFFFF",
                   textShadow: "0 1px 2px rgba(0,0,0,0.3)",
                 }}
-                aria-label="AI-контроль версий"
+                aria-label="Студия анимации"
               >
-                AI-контроль версий
+                Студия анимации
               </h1>
               <p
                 className="mb-6 sm:mb-8 mx-auto h-auto select-text"
@@ -154,25 +149,20 @@ export default function Home() {
                   backgroundColor: "transparent",
                 }}
               >
-                Отменяйте ошибки AI мгновенно -- сохраняйте прогресс и восстанавливайте в один клик.
+                Создаём 2D и 3D анимацию для брендов, кино и игр — от идеи до финального ролика.
               </p>
               <div className="flex flex-row justify-center gap-3 md:gap-4 mb-8">
                 <Button
                   className="bg-white hover:bg-gray-100 flex items-center justify-center px-4 md:px-6 lg:px-8 rounded-lg shadow-lg font-mono text-sm md:text-base font-semibold tracking-wider text-black h-[50px] md:h-[60px] min-w-[180px] md:min-w-[220px]"
                   onClick={openInstallModal}
                 >
-                  <Download className="mr-2 h-4 w-4" /> УСТАНОВИТЬ
+                  <Download className="mr-2 h-4 w-4" /> ЗАКАЗАТЬ ПРОЕКТ
                 </Button>
                 <a
-                  href="https://x.com/jackjack_eth"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#portfolio"
                   className="bg-black hover:bg-black/80 flex items-center justify-center px-4 md:px-6 lg:px-8 rounded-lg shadow-lg font-mono text-sm md:text-base font-semibold tracking-wider text-white h-[50px] md:h-[60px] min-w-[180px] md:min-w-[220px] border border-white/10"
                 >
-                  <svg className="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                  </svg>
-                  НАПИСАТЬ
+                  НАШИ РАБОТЫ
                 </a>
               </div>
               <div className="relative w-full flex-grow flex items-center justify-center rounded-md overflow-hidden">
@@ -198,21 +188,21 @@ export default function Home() {
                 color: "#999999",
               }}
             >
-              Работает там, где вы разрабатываете
+              Работаем с любым форматом и платформой
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-y-8 sm:gap-y-12 gap-x-6 md:gap-x-8 mb-8 md:mb-12 max-w-6xl mx-auto">
-              <CompanyName name="Windsurf" />
-              <CompanyName name="Claude Code" />
-              <CompanyName name="Cursor" />
-              <CompanyName name="VS Code" />
-              <CompanyName name="Manus AI" />
-              <CompanyName name="Gemini CLI" noWrapDesktop={true} />
+              <CompanyName name="2D анимация" />
+              <CompanyName name="3D анимация" />
+              <CompanyName name="Motion Design" />
+              <CompanyName name="VFX" />
+              <CompanyName name="Рекламные ролики" />
+              <CompanyName name="Explainer видео" noWrapDesktop={true} />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-y-8 sm:gap-y-12 gap-x-6 md:gap-x-8 max-w-4xl mx-auto">
-              <CompanyName name="Firebase Studio" />
-              <CompanyName name="OpenAI Codex CLI" noWrapDesktop={true} />
-              <CompanyName name="Github Codespaces" noWrapDesktop={true} />
-              <CompanyName name="Amazon Kiro" noWrapDesktop={true} />
+              <CompanyName name="Анимация для игр" />
+              <CompanyName name="Персонажная анимация" noWrapDesktop={true} />
+              <CompanyName name="Лого-анимация" noWrapDesktop={true} />
+              <CompanyName name="Титры и субтитры" noWrapDesktop={true} />
             </div>
           </div>
         </section>
@@ -234,7 +224,7 @@ export default function Home() {
                 backgroundClip: "text",
               }}
             >
-              8 000+ разработчиков выбрали Rewind
+              500+ проектов по всему миру
             </h2>
             <p
               className="max-w-3xl mx-auto text-white/80"
@@ -245,7 +235,7 @@ export default function Home() {
                 textAlign: "center",
               }}
             >
-              От гаражных стартапов до глобальных техно-хабов -- нам доверяют по всему миру.
+              От локальных брендов до международных кино-студий — наша анимация работает везде.
             </p>
           </div>
 
@@ -391,8 +381,8 @@ export default function Home() {
         <SaveReviewRestoreSection onOpenInstall={openInstallModal} />
         <AgenticAISearchSection onOpenInstall={openInstallModal} />
         <FeatureVideoSection
-          title="Версионность между IDE"
-          description="Переключайтесь между Cursor, Windsurf и VSCode -- и продолжайте с того места, где остановились."
+          title="Анимация под любую платформу"
+          description="От Instagram-рилс до полнометражного кино — адаптируем каждый ролик под нужный формат и платформу."
           videoSrc="/videos/cross-ides.mp4"
           fallbackVideoSrc={VIDEO_URLS.crossIde}
           gradientClass="gradient-yellow-red-diagonal"
